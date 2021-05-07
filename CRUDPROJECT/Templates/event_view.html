@@ -1,0 +1,36 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Events</title>
+</head>
+<body>
+
+
+
+<h1>List of Events</h1>
+<table border="1" width="600">
+<tr>
+<td>Name</td>
+<td>Address</td>
+<td>contact</td>
+</tr>
+
+{% for data in dataset %}
+<tr>
+<td>{{ data.name }}</td>
+<td>
+{{ data.address }}</td>
+<td>{{ data.contact }}
+</td>
+    <td>
+            <a href="/CRUDAPP/updateview/{{ data.id }}">Edit</a>
+            <a href="/CRUDAPP/delete/{{ data.id }}">Delete</a>
+            <a href="/CRUDAPP/detailview/{{ data.id }}">View</a>
+        </td>
+</tr>
+{% endfor %}
+</table>
+
+<h4><a href="/CRUDAPP/eventpost">Create New Event</a></h4>
+</body>

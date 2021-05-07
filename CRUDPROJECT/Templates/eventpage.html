@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<h1 align="center">Welcome To Our Event Post Page!</h1>
+
+<form action="eventpost" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
